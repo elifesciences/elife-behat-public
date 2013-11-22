@@ -1,0 +1,7 @@
+default:
+  paths:
+    bootstrap:  '%behat.paths.features%/bootstrap'
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url: http://elife.vbox.local
+      goutte: ~
