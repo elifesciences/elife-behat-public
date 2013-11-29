@@ -1,0 +1,13 @@
+{
+    "name": "elife-behat",
+    "description": "Behat for elifesciences.org",
+    "require": {
+        "behat/mink-sahi-driver": "*",
+        "drupal/drupal-extension": "*"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "vendor-dir": "vendor/",
+        "bin-dir": "bin/"
+    }
+}
