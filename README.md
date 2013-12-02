@@ -42,12 +42,33 @@ Additionally, Sahi needs to know where phantomjs is, and how to handle it. Tell 
         <displayName>PhantomJS</displayName>
         <icon>chrome.png</icon>
     >>> <path>/usr/local/bin/phantomjs</path>
-    >>> <options>--proxy=localhost:9999 [PATH_TO_THIS_REPO]/phantom-sahi.js</options>
+    >>> <options>--proxy=localhost:9999 $userDir/config/phantom-sahi.js</options>
         <processName>phantomjs</processName>
         <capacity>100</capacity>
             <force>true</force>
     </browserType>
 
+#### What's phantom-sahi.js? ####
+It bridges between sahi and phantom. Copy the following, save it to the path specified in ```<options>``` above, and there you go:
+
+    if (phantom.args.length === 0) {
+    console.log('Usage: sahi.js <Sahi Playback Start URL>');
+        phantom.exit();
+    } else {
+        var address = phantom.args[0];
+            console.log('Loading ' + address);
+        var page = new WebPage();
+            page.open(address, function(status) {
+            if (status === 'success') {
+                var title = page.evaluate(function() {
+                        return document.title;
+        });
+                console.log('Page title is ' + title);
+            } else {
+                console.log('FAIL to load the address');
+                }
+        });
+    }
 
 
 (Sahi and phantomjs info abstracted from [http://shaneauckland.co.uk/2012/11/headless-behatmink-testing-with-sahi-and-phantomjs/](http://shaneauckland.co.uk/2012/11/headless-behatmink-testing-with-sahi-and-phantomjs/)
