@@ -18,7 +18,7 @@ specify the base url in the `behat.yml` file.
 If you haven't already got them on the machine, you'll need to install sahi and phantomjs for testing javascript behaviours.
 
 #### Sahi ####
-* Depends on the JDK. As of 2013-12-03, this can be installed for Mavericks from [apple][http://support.apple.com/kb/DL1572?viewlocale=en_US].
+* Depends on the JDK. As of 2013-12-03, this can be installed for Mavericks from [apple](http://support.apple.com/kb/DL1572?viewlocale=en_US).
 * [Download Sahi from Sourceforge](http://sourceforge.net/projects/sahi/files/sahi-v35/20110719/install_sahi_v35_20110719.jar/download).
 * Install it
 
