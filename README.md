@@ -1,12 +1,16 @@
 Behat - elifesciences.org
 =========================
 
+If you want to run javascript tests, please check the prequisites below, otherwise for non-javascript tests just:
+
 * check out this repo
 * cd into the project folder
 * run 'curl http://getcomposer.org/installer | php'
-* run php composer.phar install
+* run 'php composer.phar install'
 * run './bin/behat'
 
+In order to modify the location of the site you are testing, for example if you want to test a dev site, vs the live site, you can
+specify the base url in the `behat.yml` file.
 
 ## Setting up Javascript testing with Sahi and phantomjs ##
 
@@ -14,7 +18,8 @@ Behat - elifesciences.org
 If you haven't already got them on the machine, you'll need to install sahi and phantomjs for testing javascript behaviours.
 
 #### Sahi ####
-* [Download it from Sourceforge](http://sourceforge.net/projects/sahi/files/sahi-v35/20110719/install_sahi_v35_20110719.jar/download).
+* Depends on the JDK. As of 2013-12-03, this can be installed for Mavericks from [apple][http://support.apple.com/kb/DL1572?viewlocale=en_US].
+* [Download Sahi from Sourceforge](http://sourceforge.net/projects/sahi/files/sahi-v35/20110719/install_sahi_v35_20110719.jar/download).
 * Install it
 
 #### phantomjs ####
