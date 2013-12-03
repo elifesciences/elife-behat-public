@@ -3,7 +3,7 @@ default:
     bootstrap:  '%behat.paths.features%/bootstrap'
   extensions:
     Behat\MinkExtension\Extension:
-      base_url: http://elife.elifesciences.org
+      base_url: URI_UNDER_TEST
       javascript_session: sahi
       browser_name: phantomjs
       goutte: ~
